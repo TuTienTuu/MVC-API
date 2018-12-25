@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Web.Model.Abstract;
 
 namespace Web.Model.Models
 {
-    [Table("ProductCategory")]
-    public class ProductCategory : Auditable
+    [Table("PostCategories")]
+    public class PostCategory
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -18,6 +17,7 @@ namespace Web.Model.Models
 
         [Required]
         [MaxLength(255)]
+        [Column(TypeName = "varchar")]
         public string Alias { get; set; }
 
         [MaxLength(500)]
@@ -30,6 +30,6 @@ namespace Web.Model.Models
         public string Image { get; set; }
 
         public bool? HomeFlag { get; set; }
-        public virtual IEnumerable<Product> Products { get; set; }
+        public virtual IEnumerable<Post> Posts { get; set; }
     }
 }
