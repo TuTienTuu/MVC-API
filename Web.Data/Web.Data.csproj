@@ -51,6 +51,13 @@
     <Compile Include="Infrastructure\Disposeable.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\201812260822453_InitialDB.cs" />
+    <Compile Include="Migrations\201812260822453_InitialDB.Designer.cs">
+      <DependentUpon>201812260822453_InitialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Repositories\ProductCategoryRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="WebDbContext.cs" />
     <Compile Include="Infrastructure\IDbFactory.cs" />
     <Compile Include="Infrastructure\IRepository.cs" />
@@ -62,7 +69,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <EmbeddedResource Include="Migrations\201812260822453_InitialDB.resx">
+      <DependentUpon>201812260822453_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Web.Model\Web.Model.csproj">
