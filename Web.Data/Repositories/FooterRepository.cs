@@ -1,7 +1,7 @@
 ﻿using Web.Data.Infrastructure;
 using Web.Model.Models;
 
-namespace TeduShop.Data.Repositories
+namespace Web.Data.Repositories
 {
     public interface IFooterRepository : IRepository<Footer>
     {

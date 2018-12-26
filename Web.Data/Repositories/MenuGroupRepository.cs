@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Web.Data.Infrastructure;
 using Web.Model.Models;
 
-namespace TeduShop.Data.Repositories
+namespace Web.Data.Repositories
 {
     public interface IMenuGroupRepository : IRepository<MenuGroup>
     {
